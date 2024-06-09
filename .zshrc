@@ -52,5 +52,5 @@ conda activate py3.12
 
 eval "$(starship init zsh)"
 
-. ~/.zsh_aliases
+. ~/.config/zsh/aliases.zsh
 
