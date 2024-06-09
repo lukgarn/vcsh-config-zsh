@@ -25,9 +25,9 @@ autoload -U compinit && compinit
 export LANG=en_US.UTF-8
 
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='emacs'
+  export EDITOR='nvim'
 else
-  export EDITOR='emacs'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -51,4 +51,6 @@ unset __conda_setup
 conda activate py3.12
 
 eval "$(starship init zsh)"
+
+. ~/.zsh_aliases
 
