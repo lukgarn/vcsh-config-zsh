@@ -11,7 +11,16 @@ ZSH_THEME="robbyrussell"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-completions conda-zsh-completion poetry)  
+plugins=(
+  conda-zsh-completion 
+  git 
+  poetry
+  you-should-use
+  zsh-autosuggestions 
+  zsh-bat
+  zsh-completions 
+  zsh-syntax-highlighting 
+)  
  
 source $ZSH/oh-my-zsh.sh
 

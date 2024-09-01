@@ -1,1 +1,0 @@
-available/bat.zsh
