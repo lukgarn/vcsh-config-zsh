@@ -6,8 +6,6 @@ export LANG=en_US.UTF-8
 
 export EDITOR='vim'
 
-export PATH=/opt/rye/shims:$PATH
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
