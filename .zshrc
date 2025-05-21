@@ -4,12 +4,12 @@ autoload -U compinit && compinit
 
 export LANG=en_US.UTF-8
 
-export EDITOR='vim'
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-for i in ~/.config/zsh/*.zsh ~/.config/zsh/local/*.zsh; do
+for i in ~/.config/zsh/zshrc/*.zsh; do
   source $i
 done
+
+source ~/.config/zsh/omz.zsh
 
