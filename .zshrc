@@ -1,15 +1,9 @@
-autoload -U compinit && compinit
-
-# User configuration
-
-export LANG=en_US.UTF-8
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-for i in ~/.config/zsh/zshrc/*.zsh; do
-  source $i
+for script in ~/.config/zsh/zshrc/before/*.zsh; do
+  source $script
 done
 
 source ~/.config/zsh/omz.zsh
 
+for script in ~/.config/zsh/zshrc/after/*.zsh; do
+  source $script
+done
