@@ -15,8 +15,9 @@ HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(
   conda-zsh-completion 
+  fzf
   git
-#  poetry
+  rust
   uv
   you-should-use
   zsh-autosuggestions 
