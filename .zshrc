@@ -1,4 +1,3 @@
-autoload -U compinit && compinit
 export LANG=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.
@@ -18,19 +17,19 @@ plugins=(
   conda-zsh-completion 
   git
 #  poetry
+  uv
   you-should-use
   zsh-autosuggestions 
-  zsh-bat
   zsh-completions 
   zsh-syntax-highlighting 
 )  
  
+autoload -U compinit && compinit
+source $ZSH/oh-my-zsh.sh
 
 for script in ~/.config/zsh/zshrc/*.zsh; do
   source $script
 done
-
-source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
 
