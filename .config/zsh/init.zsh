@@ -38,6 +38,14 @@ else
   cargo install fd-find
 fi
 
+# fzf
+if (( $+commands[fzf] )); then
+  echo "fzf already installed"
+else
+  echo "Installing fzf..."
+  brew install fzf
+fi
+
 # starship
 if (( $+commands[starship] )); then
   echo "starship already installed"
