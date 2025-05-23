@@ -1,0 +1,88 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+command_timeout = 800
+
+format = """
+$username@$hostname:$directory\
+$vcsh\
+$git_branch$git_commit$git_status$git_metrics$git_state$package\
+$kubernetes\
+$docker_context\
+$cmd_duration\
+$direnv$c$cmake$rust$vagrant$conda$python\
+$line_break\
+$shlvl$jobs$container$shell\
+$status\
+$character"""
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
+vimcmd_symbol = '[V](bold green)'
+vimcmd_replace_one_symbol = '[V](bold purple)'
+vimcmd_replace_symbol = '[V](bold purple)'
+vimcmd_visual_symbol = '[V](bold yellow)'
+
+[cmd_duration]
+format = '[ $duration]($style) '
+
+[conda]
+format = '[$symbol$environment]($style) '
+symbol = '🅒 '
+ignore_base = false
+
+[directory]
+truncation_symbol = '.../'
+repo_root_style = 'bold red'
+fish_style_pwd_dir_length = 1
+
+[git_branch]
+truncation_length = 24
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[git_metrics]
+disabled = false
+format = '(\([+$added]($added_style)/[-$deleted]($deleted_style)\)) '
+
+[git_status]
+format = '(\[[$all_status$ahead_behind]($style)\])'
+ahead = ' 󰁞${count}'
+diverged = ' 󰁞${ahead_count}󰁆${behind_count}'
+behind = ' 󰁆${count}'
+
+[hostname]
+ssh_only = false
+format = '[$hostname]($style)'
+
+[package]
+format = '[$version]($style) '
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = '󰌠 '
+
+[username]
+format = '[$user]($style)'
+show_always = true
+
+[shell]
+disabled = false
+unknown_indicator = '?'
+
+[shlvl]
+disabled = false
+format = '[$symbol ]($style)'
+repeat = true
+symbol = '❯'
+repeat_offset = 1
+threshold = 0
+
+[status]
+format = '[\[$symbol($common_meaning )($signal_number:$signal_name )(\($status\))\] ]($style)'
+symbol = ""
+disabled = false
+map_symbol = true
+
+[vcsh]
+format = 'vcsh:[$repo]($style) '
+disabled = true
