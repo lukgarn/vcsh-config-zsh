@@ -9,11 +9,18 @@ $git_branch$git_commit$git_status$git_metrics$git_state$package\
 $kubernetes\
 $docker_context\
 $cmd_duration\
-$direnv$c$cmake$rust$vagrant$conda$python\
+$direnv$c$cmake$rust$vagrant$conda${custom.uv}\
 $line_break\
 $shlvl$jobs$container$shell\
 $status\
 $character"""
+
+[custom.uv]
+detect_files = ['uv.lock']
+command = "uv run python --version | sed 's/Python //'"
+format = '[${symbol}uv:$output ]($style)'
+symbol = '󰌠 '
+style = 'yellow bold'
 
 [character]
 success_symbol = '[➜](bold green)'
